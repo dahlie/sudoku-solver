@@ -1,0 +1,42 @@
+@import '../node_modules/purecss/build/pure.css'
+
+body
+  background #f4f2ea
+  font-family: 'Lato', sans-serif
+  font-size 16px
+
+h1
+  color #3f2860
+  font-weight 100
+  font-size 3em
+  letter-spacing 6px
+  text-align center
+  margin 20px 0px
+
+.sudoku
+  margin 0 auto
+  border-width 3px
+  input
+    font-size 2em
+    border none
+    padding 10px
+    width 1em
+    text-align center
+  td
+    padding 0
+  tr:nth-child(3n+3)
+    border-bottom 3px solid #cbcbcb
+  td:nth-child(3n+4)
+    border-left 3px solid #cbcbcb
+
+.solve-button-container
+  text-align center
+  .solve-button
+    margin 20px 0px
+    font-size 2em
+    font-weight 100
+    letter-spacing 10px
+    color #fff
+    background #ef6d3b
+    &:hover
+      background #fa8b60
