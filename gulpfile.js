@@ -1,6 +1,7 @@
 /*eslint "no-var":0 */
 'use strict';
 
+var babelify = require('babelify');
 var browserify = require('browserify');
 var browserSync = require('browser-sync');
 var duration = require('gulp-duration');
@@ -26,7 +27,7 @@ var production = process.env.NODE_ENV === 'production';
 var config = {
   destination: './public',
   scripts: {
-    source: './src/main.js',
+    source: './src/js/main.jsx',
     destination: './public/js/',
     extensions: ['.jsx'],
     filename: 'bundle.js'
@@ -74,6 +75,9 @@ function handleError(err) {
 
 gulp.task('scripts', function() {
   var pipeline = browserify(browserifyConfig)
+    .transform(babelify.configure({
+      stage: 0
+    }))
     .bundle()
     .on('error', handleError)
     .pipe(source(config.scripts.filename));

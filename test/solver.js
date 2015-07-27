@@ -1,7 +1,7 @@
 import { assert } from 'chai'
 import sudokus from './test-sudokus'
 
-import solver from '../src/solver'
+import solver from '../src/js/solver'
 
 describe('helpers', () => {
   describe('cross', () => {
