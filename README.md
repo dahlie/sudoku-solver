@@ -1,6 +1,6 @@
 # sudoku-solver
 
-Simple sudoku solver written with ES6/ES7. Based on [excellent article of Peter Norvig](http://norvig.com/sudoku.html).
+Simple sudoku solver written with ES6/ES7 and React. Based on [excellent article of Peter Norvig](http://norvig.com/sudoku.html).
 
 ### Getting things up and running
 
