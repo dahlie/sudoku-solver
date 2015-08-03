@@ -3,4 +3,6 @@ env:
   global:
   - GH_REF: github.com/dahlie/sudoku-solver.git
   - secure: "R45yolVuu1xeicbOAKfbATLeT2KrglwcEq4K/oH70LDUXPtpkZdVnbBqz7vJt0/q150fd9KAGBcffVaqFcpcSuRXBKf4X8JW1Jn93yDwW/CUXDEGkhXnUE8jib08omK+cXTErBougViLITluJuZ/N9AWsT7tf4oMGnYwGpPGzEkDTdBRBgfwEuxpUjNQb2urdDhZZjaYZAvwNRskfMHitn2Y1KTFgITCF9bhF8TkT/ozIBNpx4XyenKBrNs392OVexPbu//F37Vs4ZbVgmY9dvCR4hq+L/z+klpd/5DASW7R4hGkxSrjmKwhNGluK1qSoC4OBJrfzCe5Ce3/T85trXUpH5ZsVjnb5gWDjXafIwWKJ9gkWHHs6n/1Jz0og9jvnZHpfmmSw4yAW6tlruYYhM+Vh2Ly9MQji5/fqS1EQa/KZnTDtmiUEvsx7YIAmegaPluHi4S4EBZw+jVfFTIulFa+EAsaw1KdhX+LhwnSNcPQX5W3mr2ylUbZx6bVclnBNhqztmcS2y2dSoM+Jrk8sbGJ44BQpiwlvOwYPlF6SUkt+fCOrZaUdG1dcMFG8TNLmg/VWZ438YLeVxLFyHzARLpb06TEkec+Z5YQ1zVOlbR8yp6/Gafk7j2f/etZBeZr7Ykxva958wrGVP1oXzFKg2yKVbUr8OsUGAwHHjTZ8WQ="
-
+language: node_js
+node_js:
+  - "iojs"
