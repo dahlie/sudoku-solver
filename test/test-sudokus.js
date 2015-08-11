@@ -134,4 +134,6 @@ const hardest = [
   '....7..2.8.......6.1.2.5...9.54....8.........3....85.1...3.2.8.4.......9.7..6....'
 ]
 
-export default { easy, hard, hardest }
+const invalid = '..53.....8......2887..1.5..4....53..81..7...6..32...8..6.5....9..4....3......97..'
+
+export default { easy, hard, hardest, invalid }

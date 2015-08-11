@@ -32,6 +32,8 @@ function contains(str, c) { return str.indexOf(c) >= 0 }
 
 function isEmpty(str) { return str.length == 0 }
 
+function notEmpty(str) { return !isEmpty(str) }
+
 function hasOne(str) { return str.length == 1 }
 
 function hasMany(str) { return str.length > 1 }
@@ -124,4 +126,17 @@ function solve(sudoku) {
   return search(grid)
 }
 
-export default { cross, units, peers, parse, solve }
+function validate(sudoku) {
+  return Array.from(sudoku.entries()).reduce((acc, [square, value]) => {
+    let conflicts = peers.get(square).map((peer) => sudoku.get(peer) === value ? peer : null)
+    conflicts = conflicts.filter(_.identity)
+
+    if(notEmpty(conflicts)) {
+      acc.set(square, conflicts)
+    }
+
+    return acc
+  }, new Map())
+}
+
+export default { cross, units, peers, parse, solve, validate }

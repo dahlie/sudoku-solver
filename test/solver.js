@@ -49,4 +49,13 @@ describe('solver', () => {
   it('should solve even the hardest sudokus', () => {
     sudokus.hardest.forEach((s) => { assertSolution(solver.solve(solver.parse(s))) })
   })
+
+  it('should validate given sudoku', () => {
+    let conflicts = solver.validate(solver.parse(sudokus.invalid))
+    assert.equal(4, conflicts.size)
+    assert.deepEqual(conflicts.get('B1').sort(), ['B9', 'C1', 'E1'])
+    assert.deepEqual(conflicts.get('B9').sort(), ['B1'])
+    assert.deepEqual(conflicts.get('C1').sort(), ['B1', 'E1'])
+    assert.deepEqual(conflicts.get('E1').sort(), ['B1', 'C1'])
+  })
 })
