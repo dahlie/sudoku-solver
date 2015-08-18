@@ -16,12 +16,6 @@ h1
 .sudoku
   margin 0 auto
   border-width 3px
-  input
-    font-size 2em
-    border none
-    padding 10px
-    width 1em
-    text-align center
   td
     padding 0
   tr:nth-child(3n+3)
@@ -29,14 +23,28 @@ h1
   td:nth-child(3n+4)
     border-left 3px solid #cbcbcb
 
+input
+  font-size 2em
+  border none
+  padding 10px
+  width 1em
+  text-align center
+
+.invalid
+  input
+    background #D8412B
+    color #fff
+
 .solve-button-container
   text-align center
-  .solve-button
-    margin 20px 0px
+  .pure-button
+    margin 20px
     font-size 2em
     font-weight 100
     letter-spacing 10px
     color #fff
+
+  .validate-button, .solve-button
     background #ef6d3b
     &:hover
       background #fa8b60
