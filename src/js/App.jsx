@@ -78,6 +78,7 @@ export default class App extends React.Component {
     let onChange = (values) => this.setState({values: values, pristine: false})
     let onValidate = () => this.validate(this.state.values)
     let onSolve = () => this.solve(this.state.values)
+    let onClear = () => this.setState({values: new Map(), solutionFound: null, pristine: false})
 
     return (
       <div className='pure-g'>
@@ -91,6 +92,7 @@ export default class App extends React.Component {
           <div className='solve-button-container'>
             <a className={this.getValidateClasses()} onClick={onValidate}>{this.getValidateLabel()}</a>
             <a className={this.getSolveClasses()} onClick={onSolve}>{this.getSolveLabel()}</a>
+            <a className='pure-button clear-button' onClick={onClear}>clear</a>
           </div>
         </div>
       </div>
