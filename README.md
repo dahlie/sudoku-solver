@@ -15,9 +15,9 @@ open http://localhost:9001 in your browser
 
 ### Usage
 
-#### Parsing
+#### parse(string)
 
-Parser function reads the given puzzle and returns a map with values mapped according to following notation:
+Parser function reads the given puzzle and returns a ```Map``` with values mapped according to following notation:
 
 ```
  A1 A2 A3| A4 A5 A6| A7 A8 A9
@@ -64,3 +64,11 @@ It also ignores all but the valid characters (numbers 1-9 and '0' or '.' for emp
 1 . 4 |. . . |. . . 
 `)
 ```
+
+### validate(Map)
+
+Validates the given sudoku and returns a ```Map``` of possibly conflicting squares. If no conflicts are found, returned Map will be empty.
+
+### solve(Map)
+
+Tries to solve the given sudoku and returns a ```Map``` of square-value pairs for each square if a possible solution has been found. If no solution is found, function returns a ```null```.
