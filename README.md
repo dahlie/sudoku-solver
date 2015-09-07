@@ -13,6 +13,10 @@ npm start
 open http://localhost:9001 in your browser
 ```
 
+### Live demo
+
+Check out http://dahlie.github.io/sudoku-solver/.
+
 ### Usage
 
 #### parse(string)
